@@ -1,0 +1,7 @@
+# First-Principles Elasticity and Anisotropic Polycrystal Analysis
+
+Analyze the supplied orthorhombic crystal using the VASP unit-cell structure and the DFT strain-energy dataset. Determine the reference cell volume, atom count, mass density, elastic stiffness and compliance tensors, polycrystalline elastic properties, directional elastic response, acoustic properties, and uncertainty estimates from the supplied data.
+
+The structure is provided at `/app/data/POSCAR_UNITCELL` and the strain-energy data are provided at `/app/data/DFT_ENERGY_STRAINS.csv`. Use the supplied crystal structure and the complete strain-energy dataset as the source data for the analysis. The calculation must preserve consistent physical units when converting between cell energies, energy densities, elastic constants, density, and acoustic quantities.
+
+Write the final machine-readable result to `/app/output/elastic_properties.json`. The result must contain the cell volume, density, atom count, full 6×6 stiffness and compliance matrices, Voigt-Reuss-Hill bulk and shear moduli, Young's modulus, Poisson's ratio, Pugh ratio, universal elastic anisotropy, directional Young's-modulus and compressibility extrema, acoustic velocities and anisotropy, Debye temperature, fit diagnostics, and bootstrap uncertainty information.

@@ -1,1 +1,34 @@
+schema_version = "1.4"
 
+[task]
+name = "physics/condensed-matter-elasticity"
+version = "4.0.1"
+description = "Orthorhombic elasticity analysis from DFT strain-energy data."
+keywords = ["physics", "condensed-matter", "dft", "elasticity", "orthorhombic", "anisotropy", "acoustics", "pytest"]
+
+[metadata]
+difficulty = "hard"
+category = "physics"
+subcategory = "condensed-matter-physics"
+tags = ["dft", "elasticity", "orthorhombic", "anisotropy", "acoustics", "uncertainty"]
+difficulty_explanation = "Requires a full orthorhombic elastic tensor, nonlinear strain-energy fitting, uncertainty analysis, directional elasticity, and Christoffel acoustic calculations."
+solution_explanation = "A reference pipeline is provided only in the solution directory and is executed by the Harbor Oracle agent."
+verification_explanation = "Deterministic tests independently recompute structural, elastic, polycrystalline, directional, acoustic, and robustness quantities and write a Harbor reward."
+expert_time_estimate_hours = 2.5
+relevant_experience = "First-principles materials modelling, elasticity theory, numerical fitting, and scientific Python."
+
+[verifier]
+timeout_sec = 300.0
+user = "root"
+
+[agent]
+timeout_sec = 1800.0
+user = "root"
+
+[environment]
+build_timeout_sec = 900.0
+os = "linux"
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+allow_internet = false
